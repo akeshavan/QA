@@ -56,7 +56,8 @@ myApp.controller("SidebarCtrl", function($scope){
 			}
 			
 			$scope.images = data
-			console.log(data)
+			$scope.$apply()
+            //console.log(data)
 		}
 		
 		         
