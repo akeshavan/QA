@@ -17,7 +17,8 @@ myApp.controller("SidebarCtrl", function($scope){
         console.log("updated headers witha pply")
 		//$scope.headers = headers
 		//$scope.headers_rev = headers.reverse();
-		$scope.headers.forEach(function(val){$scope.options[val] = []})
+		$scope.$apply(function () {
+        $scope.headers.forEach(function(val){$scope.options[val] = []})
 		//console.log($scope.headers)
 		$scope.get_unique = function(header){
 			var vals = []
@@ -61,7 +62,7 @@ myApp.controller("SidebarCtrl", function($scope){
 			//$scope.$apply()
             //console.log(data)
 		}
-		
+		})
 		         
 	})
 		
