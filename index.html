@@ -17,7 +17,7 @@
 		                <h3>{{hdr}}</h3>
 						<select class="multiselect" data-placeholder="Select" 
 						                ng-model="options[hdr]" ng-options="item as item for item in get_unique(hdr)"
-						                multiple="multiple" multiselect-dropdown >
+						                multiple="multiple" multiselect-dropdown ng-model-instant>
                         </select>
 						
 		            </li>
