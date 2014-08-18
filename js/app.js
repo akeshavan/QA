@@ -35,10 +35,10 @@ myApp.controller("SidebarCtrl", function($scope){
 			data_tmp = []
 			for (i=0; i<$scope.headers.length; i++){
 				k = $scope.headers.length
-				console.log($scope.headers[k-i-1])
+				//console.log($scope.headers[k-i-1])
 				H = $scope.headers[k-i-1]
-			    console.log(k)
-				console.log($scope.options[H])
+			    //console.log(k)
+				//console.log($scope.options[H])
 				for (o=0;o<$scope.options[H].length; o++){
 					
 					O = $scope.options[H][o]
