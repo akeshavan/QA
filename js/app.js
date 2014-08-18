@@ -6,6 +6,7 @@ myApp.controller("SidebarCtrl", function($scope){
 	$scope.images = []
 	
 	d3.csv("data/freesurferqa.csv", function(error,data) {
+        console.log("loaded data")
 		data = data
 		headers = Object.keys(data[0]);
 		$scope.data = data
