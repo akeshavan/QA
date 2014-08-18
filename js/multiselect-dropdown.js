@@ -5,7 +5,7 @@ myApp.directive('multiselectDropdown', [function() {
     return function(scope, element, attributes) {
         
         element = $(element[0]); // Get the element as a jQuery element
-        console.log(element)
+        //console.log(element)
         // Below setup the dropdown:
         
         element.multiselect({
