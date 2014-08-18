@@ -9,14 +9,16 @@ myApp.controller("SidebarCtrl", function($scope){
         console.log("loaded data")
 		data = data
 		headers = Object.keys(data[0]);
-		$scope.data = data
+		$scope.$apply(function () {$scope.data = data})
+        console.log("updated data wwith apply")
 		headers.shift() //get rid of that empty row name
 		headers.shift() //get rid of "image" since its first...change this??
-		$scope.headers = headers
+		$scope.$apply(function () {$scope.headers = headers})
+        console.log("updated headers witha pply")
+		//$scope.headers = headers
 		//$scope.headers_rev = headers.reverse();
 		$scope.headers.forEach(function(val){$scope.options[val] = []})
 		//console.log($scope.headers)
-		
 		$scope.get_unique = function(header){
 			var vals = []
 			$scope.data.forEach(function(row){
@@ -56,7 +58,7 @@ myApp.controller("SidebarCtrl", function($scope){
 			}
 			
 			$scope.images = data
-			$scope.$apply()
+			//$scope.$apply()
             //console.log(data)
 		}
 		
